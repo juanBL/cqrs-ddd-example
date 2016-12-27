@@ -18,7 +18,7 @@ services:
       - { name: 'codely.video.subscriber' }
     public: false
 
-  codely.video.notification.subscriber.send_notification_on_notification_created:
+  codely.video.notification.subscriber.send_notification_to_bi_on_notification_created:
     class: CodelyTv\Context\Video\Module\Notification\Domain\Send\SendBusinessIntelligenceNotificationOnNotificationCreated
     arguments:
       - '@codely.video.notification.notification_sender'
