@@ -18,6 +18,14 @@ services:
       - { name: 'codely.video.subscriber' }
     public: false
 
+  codely.video.notification.subscriber.send_notification_on_notification_created:
+    class: CodelyTv\Context\Video\Module\Notification\Domain\Send\SendBusinessIntelligenceNotificationOnNotificationCreated
+    arguments:
+      - '@codely.video.notification.notification_sender'
+    tags:
+      - { name: 'codely.video.subscriber' }
+    public: false
+
 
   # Services
 
